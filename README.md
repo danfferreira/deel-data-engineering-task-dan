@@ -31,11 +31,12 @@ The pipeline follows this workflow:
 4. **Makefile** 
    - Use **make all** to run all the infrastructure and streaming process
    - use **make csv** to create a csv with a snapshot from the table current to
-## Further improvements
+## Future improvements
 
 - Adjust Pyflink queries using global views and CTEs, improving readability
 - Create a SCD Type 2 with full CDC data, for audit purposes
 - Change VARCHAR to Timestamp in sink tables in FlinkSQL, to avoid CAST in the SQL query in the csv writer (is currently using epoch)
 - Study better approaches between debezium format and flink to avoid complex parsing
 - Create a better guide and architecture overview with images
-
+- Improve data quality with Flink windows (tumbling maybe?) and evaluate a better timing for watermarks
+- Add integration tests 
